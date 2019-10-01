@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<!--
+    Name: Caleb Earney
+    Date Created: 9/25/2019
+    Most recent revision: Created base webpages
+-->
+<html lang="en"> 
+    <head> 
+        <title>Contact</title>
+    </head> 
+    
+    <body>
+        <header>
+            <h1 style="text-align: center;">Edible Elysium</h1>
+        </header>
+		
+		<hr />
+		
+		<nav>
+			
+			<a href="index.html">Home</a>
+			<a href="menu.html">Menu</a>
+			<a href="contact.html">Contact Us</a>
+			
+		</nav>
+		
+		<hr />
+		
+		</br>
+		
+		<center>
+		
+			<form action="submit.html" method="POST">
+	
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name"></br></br>
+			
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"></br></br>
+			
+			<label for="phone">Phone:</label>
+			<input type="phone" id="phone" name="phone"></br></br>
+
+			<label for="inquiry">Reason for Inquiry:</label>
+			<select id="inquiry" name="inquiry">
+				<option value="default" selected>Catering</option>
+				<option value="party">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+			</select>
+			
+			</br></br>
+			
+			<label for="info">Additional Information:</label>
+			<textarea id="info" name="info"></textarea>
+			
+			</br></br>
+			
+			<label>Have you been to the restaurant?</label>
+			<input type="radio" id="choice1" name="questionnaire" value="no">
+			<label for="choice1">No</label>
+			<input type="radio" id="choice2" name="questionnaire" value="yes">
+			<label for="choice2">Yes</label>
+			
+			</br></br>
+			
+			<label>Best days to contact you:</label>
+			<input type="checkbox" id="mon" name="weekday" value="mon">
+			<label for="mon">M</label>
+			<input type="checkbox" id="tues" name="weekday" value="tues">
+			<label for="tues">T</label>
+			<input type="checkbox" id="wed" name="weekday" value="wed">
+			<label for="wed">W</label>
+			<input type="checkbox" id="thurs" name="weekday" value="thurs">
+			<label for="thurs">Th</label>
+			<input type="checkbox" id="fri" name="weekday" value="fri">
+			<label for="fri">F</label>
+			
+			</br></br>
+			
+			<input type="submit" name="submit" value="Send Request">
+		
+		<hr />
+		
+		<footer>
+			<p>404 Northfork Rd, Indian Trail, NC 28079</p>
+			<p>202-555-0165</p>
+        </footer>
+		</center>
+    </body> 
+</html>
