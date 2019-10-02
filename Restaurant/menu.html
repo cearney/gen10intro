@@ -15,6 +15,11 @@
 		
 		<style>
 		
+			center {
+				background-color: rgb(212, 239, 223);
+				padding: 20px;
+			}
+			
 			table {
 				table-layout: fixed;
 				text-align: center;
@@ -31,13 +36,8 @@
 				font-size: 1.5em;
 			}
 			
-			center {
-				background-color: rgb(269, 241, 179);
-				padding: 20px;
-			}
-			
 			.bevs {
-				border: 2px solid rgb(230, 210, 120);
+				border: 2px solid rgb(182, 220, 200);
 			}
 			
 			td.leftalign {
@@ -49,7 +49,7 @@
 			}
 			
 			.bevs tr:nth-child(even) {
-				background-color: rgb(230, 210, 120);
+				background-color: rgb(182, 220, 200);
 			}
 			
 			.rightalign {
@@ -67,17 +67,18 @@
     
     <body>
 		<div class="container">
-			<header>
+			<header class="jumbotron">
 				<h1>Edible Elysium</h1>
+				
 			</header>
 			
 			<hr />
 			
 			<nav>
 				
-				<a href="index.html">Home</a>
-				<a href="menu.html">Menu</a>
-				<a href="contact.html">Contact Us</a>
+				<a class="btn badge-pill" href="index.html">Home</a>
+				<a class="btn badge-pill" href="menu.html">Menu</a>
+				<a class="btn badge-pill" href="contact.html">Contact Us</a>
 				
 			</nav>
 			

@@ -6,12 +6,22 @@ header {
 
 header h1 {
 	
-	font-size: 5em;
+	font-size: 4em;
+}
+
+header.jumbotron {
+	
+	background-color: rgb(212, 239, 223);
 }
 
 footer {
 	
 	text-align: center;
+}
+
+a:link {
+	
+	color: black;
 }
 
 a:visited {
@@ -20,6 +30,19 @@ a:visited {
 }
 
 a:hover {
-  text-decoration: none !important;
-  font-weight: bold;
+	
+	text-decoration: none !important;
+	font-weight: bold;
+	color: black !important;
 }
+
+nav {
+	
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+nav .btn {
+	
+	background-color: rgb(212, 239, 223);
+}
+
