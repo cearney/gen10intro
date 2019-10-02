@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
-		<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ruge+Boogie|Satisfy&display=swap" rel="stylesheet">
 		
 		<style>
 			
@@ -23,10 +23,6 @@
 			.contact label {
 				display: inline-block;
 				text-align: right;
-			}
-			
-			.required {
-				font-weight: bold;
 			}
 			
 			div.fields label {
@@ -58,7 +54,7 @@
 			}
 			
 			div.yesno {
-				margin-right: 30%;
+				margin-right: 25%;
 			}
 			
 			div.yesno label{
@@ -66,7 +62,7 @@
 			}
 			
 			#question {
-				width: 60%;
+				width: 50%;
 			}
 			
 			div.weekdays {
@@ -122,18 +118,18 @@
 					<fieldset class="contact">
 					
 						<div class="fields">
-							<label for="name" class="required">Name:</label>
+							<label for="name">Name:</label>
 							<input type="text" id="name" name="name"><br />
 							
-							<label for="email" class="required">Email:</label>
+							<label for="email">Email:</label>
 							<input type="email" id="email" name="email"><br />
 							
-							<label for="phone" class="required">Phone:</label>
+							<label for="phone">Phone:</label>
 							<input type="phone" id="phone" name="phone"><br />
 						</div>
 						
 						<div class="selection">
-							<label for="inquiry" class="required">Reason for Inquiry:</label>
+							<label for="inquiry">Reason for Inquiry:</label>
 							<select id="inquiry" name="inquiry">
 								<option value="default" selected>Catering</option>
 								<option value="party">Private Party</option>
@@ -143,12 +139,12 @@
 						</div>
 						
 						<div class="info">
-							<label for="info" class="required">Additional Information:</label>
+							<label for="info">Additional Information:</label>
 							<textarea id="info" name="info" rows="5"></textarea>
 						</div>
 						
 						<div class="yesno">
-							<label id="question" class="required">Have you been to the restaurant?</label>
+							<label id="question">Have you been to the restaurant?</label>
 							<label for="choice1" class="radio-inline">
 								<input type="radio"  id="choice1" name="questionnaire" value="no">No
 							</label>
@@ -158,7 +154,7 @@
 						</div>
 						
 						<div class="weekdays">
-							<label id="best" class="required">Best days to contact you:</label>
+							<label id="best">Best days to contact you:</label>
 							<label for="mon" class="checkbox-inline">
 								<input type="checkbox" id="mon" name="weekday" value="mon">M
 							</label>

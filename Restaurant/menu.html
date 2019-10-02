@@ -2,13 +2,62 @@
 <!--
     Name: Caleb Earney
     Date Created: 9/25/2019
-    Most recent revision: Created base webpages
+    Most recent revision: 
 -->
 <html lang="en"> 
     <head>
 	
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
+		<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+		
+		<style>
+		
+			table {
+				table-layout: fixed;
+				text-align: center;
+			}
+			
+			.food td {
+				vertical-align: top;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-bottom: 20px;
+			}
+			
+			th {
+				font-size: 1.5em;
+			}
+			
+			center {
+				background-color: rgb(269, 241, 179);
+				padding: 20px;
+			}
+			
+			.bevs {
+				border: 2px solid rgb(230, 210, 120);
+			}
+			
+			td.leftalign {
+				vertical-align: middle;
+				text-align: left;
+				padding-right: 80px;
+				padding-bottom: 10px;
+				padding-top: 10px;
+			}
+			
+			.bevs tr:nth-child(even) {
+				background-color: rgb(230, 210, 120);
+			}
+			
+			.rightalign {
+				text-align: right;
+				padding-right: 10px;
+			}
+			
+		</style>
 		
         <title>Menu</title>
 		
@@ -19,7 +68,7 @@
     <body>
 		<div class="container">
 			<header>
-				<h1 style="text-align: center;">Edible Elysium</h1>
+				<h1>Edible Elysium</h1>
 			</header>
 			
 			<hr />
@@ -34,88 +83,127 @@
 			
 			<hr />
 			
-			</br>
+			<br />
 			
 			<center>
-			
-			<table style="table-layout: fixed; text-align: center;">
-				<tr>
-					<th>Burgers and Fries</th>
-					<th>Hot Dog and Chips</th>
-					<th>Italian Sausage and Peppers</th>
-				</tr>
+				<table class="food">
+					<tr>
+						<th>Burgers and Fries</th>
+						<th>Hot Dog and Chips</th>
+						<th>Italian Sausage and Peppers</th>
+					</tr>
+					
+					<tr>
+						<td>
+							An American Classic!<br />
+							Your choice - with or without cheese<br />
+							Pickle, onion, tomato, and lettuce<br />
+							Served with our famous thick cut<br />
+							French fries<br />
+							$7.95
+						</td>
+						<td>
+							A Summer Classic!<br />
+							Your choice - white or wheat bun<br />
+							Relish, mustard, and ketchup<br />
+							Served with our house-made chips<br />
+							$7.95
+						</td>
+						<td>
+							An All-Time Favorite<br />
+							Your choice - mild or spicy Cole Slaw<br />
+							Served with garlic mashers<br />
+							$10.95
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>Tenderloin Sandwich and Chips</th>
+						<th>House Salad</th>
+						<th>Brisket Sandwich and Fries</th>
+					</tr>
+					
+					<tr>
+						<td>
+							Really Hits the Spot!<br />
+							Plain or Sesame Seed Bun<br />
+							Pickle, onion, tomato, and lettuce<br />
+							Served with our house-made chips<br />
+							$8.95
+						</td>
+						<td>
+							On the Lighter Side<br />
+							Your choice - with or without cheese<br />
+							Iceberg lettuce. tomatoes, peppers<br />
+							Thousand Island or Ranch<br />
+							Dressing served with a dinner roll<br />
+							$6.95
+						</td>
+						<td>
+							A Taste of Texas!<br />
+							Smoked Brisjet on thick-cut<br />
+							Texas Toast<br />
+							Cole Slaw<br />
+							Smoked Brisjet on thick-cut<br />
+							Served with our famous thick cut<br />
+							French fries<br />
+							$7.95
+						</td>
+					</tr>
+					
+				</table>
+				<table class="bevs">
+					
+					<tr>
+						<th colspan="2">Beverages</th>
+					</tr>
+					
+					<tr>
+						<td class="leftalign">
+							Root Beer
+						</td>
+						<td class="rightalign">
+							$3.00
+						</td>
+					</tr>
+					<tr>
+						<td class="leftalign">
+							Bottled Water
+						</td>
+						<td class="rightalign">
+							$1.25
+						</td>
+					</tr>
+					<tr>
+						<td class="leftalign">
+							Lemonade
+						</td>
+						<td class="rightalign">
+							$1.00
+						</td>
+					</tr>
+					<tr>
+						<td class="leftalign">
+							Iced Tea
+						</td>
+						<td class="rightalign">
+							$1.25
+						</td>
+					</tr>
+					
+				</table>
+			</center>
 				
-				<tr>
-					<td style="vertical-align: top;">
-						An American Classic!</br>
-						Your choice - with or without cheese</br>
-						Pickle, onion, tomato, and lettuce</br>
-						Served with our famous thick cut</br>
-						French fries</br>
-						$7.95
-					</td>
-					<td style="vertical-align: top;">
-						A Summer Classic!</br>
-						Your choice - white or wheat bun</br>
-						Relish, mustard, and ketchup</br>
-						Served with our house-made chips</br>
-						$7.95
-					</td>
-					<td style="vertical-align: top;">
-						An All-Time Favorite</br>
-						Your choice - mild or spicy Cole Slaw</br>
-						Served with garlic mashers</br>
-						$10.95
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<th>Tenderloin Sandwich and Chips</th>
-					<th>House Salad</th>
-					<th>Brisket Sandwich and Fries</th>
-				</tr>
-				
-				<tr>
-					<td style="vertical-align: top;">
-						Really Hits the Spot!</br>
-						Plain or Sesame Seed Bun</br>
-						Pickle, onion, tomato, and lettuce</br>
-						Served with our house-made chips</br>
-						$8.95
-					</td>
-					<td style="vertical-align: top;">
-						On the Lighter Side</br>
-						Your choice - with or without cheese</br>
-						Iceberg lettuce. tomatoes, peppers</br>
-						Thousand Island or Ranch</br>
-						Dressing served with a dinner roll</br>
-						$6.95
-					</td>
-					<td style="vertical-align: top;">
-						A Taste of Texas!</br>
-						Smoked Brisjet on thick-cut</br>
-						Texas Toast</br>
-						Cole Slaw</br>
-						Smoked Brisjet on thick-cut</br>
-						Served with our famous thick cut</br>
-						French fries</br>
-						$7.95
-					</td>
-				</tr>
-				
-			</table>
-			
 			<hr />
 			
 			<footer>
 				<p>404 Northfork Rd, Indian Trail, NC 28079</p>
 				<p>202-555-0165</p>
 			</footer>
-			</center>
 		</div>
 		
 		<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->

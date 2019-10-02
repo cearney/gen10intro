@@ -1,0 +1,25 @@
+header {
+	
+	text-align: center;
+	font-family: 'Satisfy', cursive;
+}
+
+header h1 {
+	
+	font-size: 5em;
+}
+
+footer {
+	
+	text-align: center;
+}
+
+a:visited {
+	
+	color: purple;
+}
+
+a:hover {
+  text-decoration: none !important;
+  font-weight: bold;
+}
