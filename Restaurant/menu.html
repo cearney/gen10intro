@@ -11,19 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
-		<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Satisfy&display=swap" rel="stylesheet">
 		
 		<style>
-		
-			center {
-				background-color: rgb(212, 239, 223);
-				padding: 20px;
-			}
-			
-			table {
-				table-layout: fixed;
-				text-align: center;
-			}
 			
 			.food td {
 				vertical-align: top;
@@ -33,10 +23,10 @@
 			}
 			
 			th {
-				font-size: 1.5em;
+				font-size: 1.3em;
 			}
 			
-			.bevs {
+			.table {
 				border: 2px solid rgb(182, 220, 200);
 			}
 			
@@ -48,8 +38,8 @@
 				padding-top: 10px;
 			}
 			
-			.bevs tr:nth-child(even) {
-				background-color: rgb(182, 220, 200);
+			.table tr:nth-child(even) {
+				background-color: rgba(202, 240, 220, .5);
 			}
 			
 			.rightalign {
@@ -58,8 +48,9 @@
 			}
 			
 			.menu-title {
-				font-size: 1.5em;
+				font-size: 1.4em;
 				font-weight: bold;
+				text-decoration: underline;
 			}
 			
 		</style>
@@ -73,11 +64,33 @@
     </head> 
     
     <body>
+
 		<div class="container">
-			<header class="jumbotron">
+			<noscript>
+				<br />
+				<div style="border: 2px dashed red; padding: 10px">
+					<center><span style="color: red; font-weight: bold; font-size: 20px;">JavaScript is currently disabled in your browser. This site is best viewed with JavaScript enabled.</span></center>
+				</div>
+			</noscript>
+
+			<header class="jumbotron floral-gradient">
 				<h1>Edible Elysium</h1><br />
-				<h2 class="font-italic">We're opening a new location in Uptown Charlotte!</h2>
+				<h2>We're opening a new location in Uptown Charlotte!</h2>
 			</header>
+			
+			<div class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <span class="fas fa-city" aria-hidden="true"></span> We're opening a new location! It will be located in the Southside of Uptown Charlotte!
+				</div>
+				<div class="carousel-item">
+				  <span class="fas fa-seedling" aria-hidden="true"></span> We're rolling out our seasonal menu, with special options for this season.
+				</div>
+				<div class="carousel-item">
+				  <span class="fas fa-coffee" aria-hidden="true"></span> The Drink of the Month is SG Special Brew.
+				</div>
+			  </div>
+			</div>
 			
 			<hr />
 			
@@ -92,114 +105,118 @@
 			<hr />
 			
 			<br />
-			
-			<center>
 				
-				<div class="row">
-					<div class="col-lg-4 col-md">
-						<div class="menu-title">Burgers and Fries</div>
-						An American Classic!<br />
-						Your choice - with or without cheese<br />
-						Pickle, onion, tomato, and lettuce<br />
-						Served with our famous thick cut<br />
-						French fries<br />
-						$7.95
-						<br /><br />
+				<div class="content floral-gradient">
+					<div class="row">
+						<div class="col-lg-4 col-md">
+							<div class="menu-title">Burgers and Fries</div>
+							An American Classic!<br />
+							Your choice - with or without cheese<br />
+							Pickle, onion, tomato, and lettuce<br />
+							Served with our famous thick-cut<br />
+							French fries<br />
+							<span class="price-font">$7.95</span>
+							<br /><br />
+						</div>
+						<div class="col-lg-4 col-md">
+							<div class="menu-title">Hot Dog and Chips</div>
+							A Summer Classic!<br />
+							Your choice - white or wheat bun<br />
+							Relish, mustard, and ketchup<br />
+							Served with our house-made chips<br />
+							<span class="price-font">$7.95</span>
+							<br /><br />
+						</div>
+						<div class="col-lg-4 col-md">
+							<div class="menu-title">Italian Sausage and Peppers</div>
+							An All-Time Favorite<br />
+							Your choice - mild or spicy Cole Slaw<br />
+							Served with garlic mashers<br />
+							<span class="price-font">$10.95</span>
+							<br /><br />
+						</div>
 					</div>
-					<div class="col-lg-4 col-md">
-						<div class="menu-title">Hot Dog and Chips</div>
-						A Summer Classic!<br />
-						Your choice - white or wheat bun<br />
-						Relish, mustard, and ketchup<br />
-						Served with our house-made chips<br />
-						$7.95
-						<br /><br />
+					
+					<div class="row">
+						<div class="col-lg-4 col-md">
+							<div class="menu-title">Tenderloin Sandwich and Chips</div>
+							Really Hits the Spot!<br />
+							Plain or Sesame Seed Bun<br />
+							Pickle, onion, tomato, and lettuce<br />
+							Served with our house-made chips<br />
+							<span class="price-font">$8.95</span>
+							<br /><br />
+						</div>
+						<div class="col-lg-4 col-md">
+							<div class="menu-title">House Salad</div>
+							On the Lighter Side<br />
+							Your choice - with or without cheese<br />
+							Iceberg lettuce. tomatoes, peppers<br />
+							Thousand Island or Ranch<br />
+							Dressing served with a dinner roll<br />
+							<span class="price-font">$6.95</span>
+							<br /><br />
+						</div>
+						<div class="col-lg-4 col-md">
+							<div class="menu-title">Brisket Sandwich and Fries</div>
+							A Taste of Texas!<br />
+							Smoked Brisket on thick-cut<br />
+							Texas Toast<br />
+							Cole Slaw<br />
+							Served with our famous thick-cut<br />
+							French fries<br />
+							<span class="price-font">$7.95</span>
+							<br /><br />
+						</div>
 					</div>
-					<div class="col-lg-4 col-md">
-						<div class="menu-title">Italian Sausage and Peppers</div>
-						An All-Time Favorite<br />
-						Your choice - mild or spicy Cole Slaw<br />
-						Served with garlic mashers<br />
-						$10.95
-						<br /><br />
+					
+					<div class="row">
+						<div class="col-lg-4 col-md"></div>
+						<div class="col-lg-4 col-md">
+							<table class="table">
+								
+								<tr>
+									<th colspan="2">Beverages</th>
+								</tr>
+								
+								<tr>
+									<td class="leftalign">
+										Root Beer
+									</td>
+									<td class="rightalign">
+										<span class="price-font">$3.00</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="leftalign">
+										Bottled Water
+									</td>
+									<td class="rightalign">
+										<span class="price-font">$1.25</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="leftalign">
+										Lemonade
+									</td>
+									<td class="rightalign">
+										<span class="price-font">$1.00</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="leftalign">
+										Iced Tea
+									</td>
+									<td class="rightalign">
+										<span class="price-font">$1.25</span>
+									</td>
+								</tr>
+								
+							</table>
+						</div>
+						<div class="col-lg-4 col-md"></div>
 					</div>
 				</div>
-				
-				<div class="row">
-					<div class="col-lg-4 col-md">
-						<div class="menu-title">Tenderloin Sandwich and Chips</div>
-						Really Hits the Spot!<br />
-						Plain or Sesame Seed Bun<br />
-						Pickle, onion, tomato, and lettuce<br />
-						Served with our house-made chips<br />
-						$8.95
-						<br /><br />
-					</div>
-					<div class="col-lg-4 col-md">
-						<div class="menu-title">House Salad</div>
-						On the Lighter Side<br />
-						Your choice - with or without cheese<br />
-						Iceberg lettuce. tomatoes, peppers<br />
-						Thousand Island or Ranch<br />
-						Dressing served with a dinner roll<br />
-						$6.95
-						<br /><br />
-					</div>
-					<div class="col-lg-4 col-md">
-						<div class="menu-title">Brisket Sandwich and Fries</div>
-						A Taste of Texas!<br />
-						Smoked Brisket on thick-cut<br />
-						Texas Toast<br />
-						Cole Slaw<br />
-						Smoked Brisjet on thick-cut<br />
-						Served with our famous thick cut<br />
-						French fries<br />
-						$7.95
-						<br /><br />
-					</div>
-				</div>
-
-				<table class="bevs">
-					
-					<tr>
-						<th colspan="2">Beverages</th>
-					</tr>
-					
-					<tr>
-						<td class="leftalign">
-							Root Beer
-						</td>
-						<td class="rightalign">
-							$3.00
-						</td>
-					</tr>
-					<tr>
-						<td class="leftalign">
-							Bottled Water
-						</td>
-						<td class="rightalign">
-							$1.25
-						</td>
-					</tr>
-					<tr>
-						<td class="leftalign">
-							Lemonade
-						</td>
-						<td class="rightalign">
-							$1.00
-						</td>
-					</tr>
-					<tr>
-						<td class="leftalign">
-							Iced Tea
-						</td>
-						<td class="rightalign">
-							$1.25
-						</td>
-					</tr>
-					
-				</table>
-			</center>
 				
 			<hr />
 			

@@ -10,12 +10,18 @@ header h1 {
 	font-size: 4em;
 }
 
+header h2 {
+	
+	font-family: 'Bad Script', cursive;
+}
+
 header.jumbotron {
 	
 	background-color: rgb(212, 239, 223);
+	box-shadow: 0 0 10px 10px white inset;
 }
 
-footer {
+footer p{
 	
 	text-align: center;
 }
@@ -44,6 +50,57 @@ nav {
 }
 nav .btn {
 	
-	background-color: rgb(212, 239, 223);
+	background:
+    linear-gradient(
+		rgba(212, 239, 223, .93), 
+		rgba(255, 255, 223, .96)
+    );
 }
 
+.carousel {
+	text-align: center;
+	font-family: 'Bad Script', cursive;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 20px;
+	box-shadow: 0 0 10px 10px white inset;
+	
+	background:
+    linear-gradient(
+		rgba(212, 239, 223, .93), 
+		rgba(255, 255, 223, .96),
+		white
+    ),
+	url(images/ornamental.png);
+
+}
+
+.content {
+	background-color: rgb(212, 239, 223);
+	padding: 20px;
+	box-shadow: 0 0 10px 10px white inset;
+	text-align: center;
+	font-family: 'Bad Script', cursive;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+.price-font {
+	
+	font-family: "Lucida Handwriting", cursive;
+}
+
+p {
+	
+	text-align: justify;
+}
+
+.floral-gradient {
+  background:
+    linear-gradient(
+		rgba(212, 239, 223, .93), 
+		rgba(255, 255, 223, .96),
+		white
+    ),
+    url(images/ornamental.png);
+}

@@ -11,22 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
-		<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-		
-		<style>
-			.content {
-				background-color: rgb(212, 239, 223);
-				padding: 20px;
-			}
-			
-			.lead {
-				text-align: justify;
-			}
-			
-			.row {
-				text-align: center;
-			}
-		</style>
+		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Satisfy&display=swap" rel="stylesheet">
 		
         <title>Home Page</title>
 		
@@ -37,11 +22,33 @@
     </head> 
     
     <body>
+
 		<div class="container">
-			<header class="jumbotron">
+			<noscript>
+				<br />
+				<div style="border: 2px dashed red; padding: 10px">
+					<center><span style="color: red; font-weight: bold; font-size: 20px;">JavaScript is currently disabled in your browser. This site is best viewed with JavaScript enabled.</span></center>
+				</div>
+			</noscript>
+
+			<header class="jumbotron floral-gradient">
 				<h1>Edible Elysium</h1><br />
-				<h2 class="font-italic">We're opening a new location in Uptown Charlotte!</h2>
+				<h2>We're opening a new location in Uptown Charlotte!</h2>
 			</header>
+			
+			<div class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <span class="fas fa-city" aria-hidden="true"></span> We're opening a new location! It will be located in the Southside of Uptown Charlotte!
+				</div>
+				<div class="carousel-item">
+				  <span class="fas fa-seedling" aria-hidden="true"></span> We're rolling out our seasonal menu, with special options for this season.
+				</div>
+				<div class="carousel-item">
+				  <span class="fas fa-coffee" aria-hidden="true"></span> The Drink of the Month is SG Special Brew.
+				</div>
+			  </div>
+			</div>
 			
 			<hr />
 			
@@ -54,25 +61,12 @@
 			
 			<hr />
 			
-			<div class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner">
-				<div class="carousel-item active">
-				  We're opening a new location! It will be located in the Southside of Uptown Charlotte!
-				</div>
-				<div class="carousel-item">
-				  We're rolling out our seasonal menu, with special options for this season.
-				</div>
-				<div class="carousel-item">
-				  The Drink of the Month is SG Special Brew.
-				</div>
-			  </div>
-			</div>
-			
-			<div class="content">
+			<div class="content floral-gradient">
+			<br />
 				<div class="row">
 					<div class="col-lg-3 col-md-2"></div>
 					<div class="col-lg-6 col-md-8">
-						<img src="images/restaurant-1.jpg" alt="Restaurant Header Image" style="position: static;" width="100%"/>
+						<img class="rounded-circle" src="images/restaurant-1.jpg" alt="Restaurant Header Image" style="position: static;" width="100%"/>
 					</div>
 					<div class="col-lg-3 col-md-2"></div>
 				</div>
@@ -83,7 +77,7 @@
 					<div class="col-lg-3 col-md-2"></div>
 					<div class="col-lg-6 col-md-8">
 							
-							<p class="lead">
+							<p>
 							Welcome to a blissful, transcendent experience to delight your 
 							taste buds and quench your thirst for the most elegant and palate 
 							pleasing restaurant where tasting is believing. We bring you the 
