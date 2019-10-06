@@ -1,27 +1,21 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
     Name: Caleb Earney
     Date Created: 9/25/2019
-    Most recent revision: 
+    Most recent revision: Added carousel to page and fixed table with Bootstrap
 -->
-<html lang="en"> 
+<html lang="en">
     <head>
 	
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
+		<!-- Fonts retrieved from Google Fonts at https://fonts.google.com/ -->
 		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Satisfy&display=swap" rel="stylesheet">
 		
+		<!-- Internal style sheet for menu-specific styles -->
 		<style>
-			
-			.food td {
-				vertical-align: top;
-				padding-left: 20px;
-				padding-right: 20px;
-				padding-bottom: 20px;
-			}
-			
 			th {
 				font-size: 1.3em;
 			}
@@ -38,11 +32,7 @@
 				padding-top: 10px;
 			}
 			
-			.table tr:nth-child(even) {
-				background-color: rgba(202, 240, 220, .5);
-			}
-			
-			.rightalign {
+			td.rightalign {
 				text-align: right;
 				padding-right: 10px;
 			}
@@ -53,6 +43,9 @@
 				text-decoration: underline;
 			}
 			
+			.price-font {
+				font-family: "Lucida Handwriting", cursive;
+			}
 		</style>
 		
         <title>Menu</title>
@@ -65,7 +58,10 @@
     
     <body>
 
+		<!-- Div container that holds body items affected by Bootstrap -->
 		<div class="container">
+			
+			<!-- This will display if JavaScript is currently disabled in user's browser -->
 			<noscript>
 				<br />
 				<div style="border: 2px dashed red; padding: 10px">
@@ -73,11 +69,13 @@
 				</div>
 			</noscript>
 
+			<!-- Jumbotron as page header to display restaurant title and big news with floral background -->
 			<header class="jumbotron floral-gradient">
 				<h1>Edible Elysium</h1><br />
 				<h2>We're opening a new location in Uptown Charlotte!</h2>
 			</header>
 			
+			<!-- Carousel that rotates with three pieces of information about restaurant news -->
 			<div class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 				<div class="carousel-item active">
@@ -94,132 +92,134 @@
 			
 			<hr />
 			
+			<!-- Navigation bar with pills for links and a home button icon -->
 			<nav>
-				
 				<a class="btn badge-pill" href="index.html"><span class="fas fa-home" aria-hidden="true"></span></a>
 				<a class="btn badge-pill" href="menu.html">Menu</a>
 				<a class="btn badge-pill" href="contact.html">Contact Us</a>
-				
 			</nav>
 			
-			<hr />
+	<!-- Body items above are all the same across the pages. Body items below excluding footer are unique to this page --------------------------------------->
 			
+			<hr />
 			<br />
-				
-				<div class="content floral-gradient">
-					<div class="row">
-						<div class="col-lg-4 col-md">
-							<div class="menu-title">Burgers and Fries</div>
-							An American Classic!<br />
-							Your choice - with or without cheese<br />
-							Pickle, onion, tomato, and lettuce<br />
-							Served with our famous thick-cut<br />
-							French fries<br />
-							<span class="price-font">$7.95</span>
-							<br /><br />
-						</div>
-						<div class="col-lg-4 col-md">
-							<div class="menu-title">Hot Dog and Chips</div>
-							A Summer Classic!<br />
-							Your choice - white or wheat bun<br />
-							Relish, mustard, and ketchup<br />
-							Served with our house-made chips<br />
-							<span class="price-font">$7.95</span>
-							<br /><br />
-						</div>
-						<div class="col-lg-4 col-md">
-							<div class="menu-title">Italian Sausage and Peppers</div>
-							An All-Time Favorite<br />
-							Your choice - mild or spicy Cole Slaw<br />
-							Served with garlic mashers<br />
-							<span class="price-font">$10.95</span>
-							<br /><br />
-						</div>
+			
+			<!-- Content of menu page including menu items and beverage table with floral background -->
+			<div class="content floral-gradient">
+				<!-- Bootstrap Grid Row containing top 3 items on menu -->
+				<div class="row">
+					<div class="col-lg-4 col-md">
+						<div class="menu-title">Burgers and Fries</div>
+						An American Classic!<br />
+						Your choice - with or without cheese<br />
+						Pickle, onion, tomato, and lettuce<br />
+						Served with our famous thick-cut<br />
+						French fries<br />
+						<span class="price-font">$7.95</span>
+						<br /><br />
 					</div>
-					
-					<div class="row">
-						<div class="col-lg-4 col-md">
-							<div class="menu-title">Tenderloin Sandwich and Chips</div>
-							Really Hits the Spot!<br />
-							Plain or Sesame Seed Bun<br />
-							Pickle, onion, tomato, and lettuce<br />
-							Served with our house-made chips<br />
-							<span class="price-font">$8.95</span>
-							<br /><br />
-						</div>
-						<div class="col-lg-4 col-md">
-							<div class="menu-title">House Salad</div>
-							On the Lighter Side<br />
-							Your choice - with or without cheese<br />
-							Iceberg lettuce. tomatoes, peppers<br />
-							Thousand Island or Ranch<br />
-							Dressing served with a dinner roll<br />
-							<span class="price-font">$6.95</span>
-							<br /><br />
-						</div>
-						<div class="col-lg-4 col-md">
-							<div class="menu-title">Brisket Sandwich and Fries</div>
-							A Taste of Texas!<br />
-							Smoked Brisket on thick-cut<br />
-							Texas Toast<br />
-							Cole Slaw<br />
-							Served with our famous thick-cut<br />
-							French fries<br />
-							<span class="price-font">$7.95</span>
-							<br /><br />
-						</div>
+					<div class="col-lg-4 col-md">
+						<div class="menu-title">Hot Dog and Chips</div>
+						A Summer Classic!<br />
+						Your choice - white or wheat bun<br />
+						Relish, mustard, and ketchup<br />
+						Served with our house-made chips<br />
+						<span class="price-font">$7.95</span>
+						<br /><br />
 					</div>
-					
-					<div class="row">
-						<div class="col-lg-4 col-md"></div>
-						<div class="col-lg-4 col-md">
-							<table class="table">
-								
-								<tr>
-									<th colspan="2">Beverages</th>
-								</tr>
-								
-								<tr>
-									<td class="leftalign">
-										Root Beer
-									</td>
-									<td class="rightalign">
-										<span class="price-font">$3.00</span>
-									</td>
-								</tr>
-								<tr>
-									<td class="leftalign">
-										Bottled Water
-									</td>
-									<td class="rightalign">
-										<span class="price-font">$1.25</span>
-									</td>
-								</tr>
-								<tr>
-									<td class="leftalign">
-										Lemonade
-									</td>
-									<td class="rightalign">
-										<span class="price-font">$1.00</span>
-									</td>
-								</tr>
-								<tr>
-									<td class="leftalign">
-										Iced Tea
-									</td>
-									<td class="rightalign">
-										<span class="price-font">$1.25</span>
-									</td>
-								</tr>
-								
-							</table>
-						</div>
-						<div class="col-lg-4 col-md"></div>
+					<div class="col-lg-4 col-md">
+						<div class="menu-title">Italian Sausage and Peppers</div>
+						An All-Time Favorite<br />
+						Your choice - mild or spicy Cole Slaw<br />
+						Served with garlic mashers<br />
+						<span class="price-font">$10.95</span>
+						<br /><br />
+					</div>
+				</div>
+				<!-- Bootstrap Grid Row containing bottom 3 items on menu -->
+				<div class="row">
+					<div class="col-lg-4 col-md">
+						<div class="menu-title">Tenderloin Sandwich and Chips</div>
+						Really Hits the Spot!<br />
+						Plain or Sesame Seed Bun<br />
+						Pickle, onion, tomato, and lettuce<br />
+						Served with our house-made chips<br />
+						<span class="price-font">$8.95</span>
+						<br /><br />
+					</div>
+					<div class="col-lg-4 col-md">
+						<div class="menu-title">House Salad</div>
+						On the Lighter Side<br />
+						Your choice - with or without cheese<br />
+						Iceberg lettuce. tomatoes, peppers<br />
+						Thousand Island or Ranch<br />
+						Dressing served with a dinner roll<br />
+						<span class="price-font">$6.95</span>
+						<br /><br />
+					</div>
+					<div class="col-lg-4 col-md">
+						<div class="menu-title">Brisket Sandwich and Fries</div>
+						A Taste of Texas!<br />
+						Smoked Brisket on thick-cut<br />
+						Texas Toast<br />
+						Cole Slaw<br />
+						Served with our famous thick-cut<br />
+						French fries<br />
+						<span class="price-font">$7.95</span>
+						<br /><br />
 					</div>
 				</div>
 				
+				<!-- Bootstrap Grid Row containing beverage table -->
+				<div class="row">
+					<div class="col-lg-4 col-md"></div>
+					<!-- Bootstrap striped table containing beverage items -->
+					<div class="table-responsive col-lg-4 col-md">
+						<table class="table table-striped">
+							<tr>
+								<th colspan="2">Beverages</th>
+							</tr>
+							<tr>
+								<td class="leftalign">
+									Root Beer
+								</td>
+								<td class="rightalign">
+									<span class="price-font">$3.00</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="leftalign">
+									Bottled Water
+								</td>
+								<td class="rightalign">
+									<span class="price-font">$1.25</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="leftalign">
+									Lemonade
+								</td>
+								<td class="rightalign">
+									<span class="price-font">$1.00</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="leftalign">
+									Iced Tea
+								</td>
+								<td class="rightalign">
+									<span class="price-font">$1.25</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+			</div>
+				
 			<hr />
 			
+			<!-- Page footer containing address and phone number of restaurant -->
 			<footer>
 				<p>404 Northfork Rd, Indian Trail, NC 28079</p>
 				<p>202-555-0165</p>

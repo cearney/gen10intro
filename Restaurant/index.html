@@ -1,16 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
     Name: Caleb Earney
     Date Created: 9/25/2019
-    Most recent revision: 
+    Most recent revision: Added styling for background and carousel
 -->
-<html lang="en"> 
+<html lang="en">
     <head>
 	
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
+		<!-- Fonts retrieved from Google Fonts at https://fonts.google.com/ -->
 		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Satisfy&display=swap" rel="stylesheet">
 		
         <title>Home Page</title>
@@ -19,11 +20,15 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<!-- Bootstrap 4 compatible icons/fonts from https://www.w3schools.com/bootstrap4/bootstrap_icons.asp -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		
     </head> 
     
     <body>
 
+		<!-- Div container that holds body items affected by Bootstrap -->
 		<div class="container">
+			
+			<!-- This will display if JavaScript is currently disabled in user's browser -->
 			<noscript>
 				<br />
 				<div style="border: 2px dashed red; padding: 10px">
@@ -31,11 +36,13 @@
 				</div>
 			</noscript>
 
+			<!-- Jumbotron as page header to display restaurant title and big news with floral background -->
 			<header class="jumbotron floral-gradient">
 				<h1>Edible Elysium</h1><br />
 				<h2>We're opening a new location in Uptown Charlotte!</h2>
 			</header>
 			
+			<!-- Carousel that rotates with three pieces of information about restaurant news -->
 			<div class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 				<div class="carousel-item active">
@@ -52,42 +59,51 @@
 			
 			<hr />
 			
+			<!-- Navigation bar with pills for links and a home button icon -->
 			<nav>
 				<a class="btn badge-pill" href="index.html"><span class="fas fa-home" aria-hidden="true"></span></a>
 				<a class="btn badge-pill" href="menu.html">Menu</a>
 				<a class="btn badge-pill" href="contact.html">Contact Us</a>
-				
 			</nav>
+			
+	<!-- Body items above are all the same across the pages. Body items below excluding footer are unique to this page --------------------------------------->
 			
 			<hr />
 			
+			<!-- Content of home page including image and paragraph with floral background -->
 			<div class="content floral-gradient">
-			<br />
+			
+				<br />
+				
+				<!-- Bootstrap Grid Row containing home page image -->
 				<div class="row">
 					<div class="col-lg-3 col-md-2"></div>
 					<div class="col-lg-6 col-md-8">
-						<img class="rounded-circle" src="images/restaurant-1.jpg" alt="Restaurant Header Image" style="position: static;" width="100%"/>
+						<!-- Edited image retrieved from https://pixabay.com/photos/champagne-decoration-dining-2264811/ -->
+						<img class="rounded-circle" src="images/restaurant-1.jpg" alt="Restaurant Header Image"
+							style="position: static; border:10px solid rgba(212, 239, 223, .93);" width="100%"/>
 					</div>
 					<div class="col-lg-3 col-md-2"></div>
 				</div>
 					
 				<br />
 				
+				<!-- Bootstrap Grid Row containing home page paragraph -->
 				<div class="row">
 					<div class="col-lg-3 col-md-2"></div>
 					<div class="col-lg-6 col-md-8">
 							
-							<p>
-							Welcome to a blissful, transcendent experience to delight your 
-							taste buds and quench your thirst for the most elegant and palate 
-							pleasing restaurant where tasting is believing. We bring you the 
-							top chefs from around the world on a bi-weekly basis, keeping our
-							menu items, ingredients, and luxurious decor fresh and exciting for
-							a new experience each visit. No two meals will ever be the same here.
-							Come, transcend with us.
-							<br /><br />
-							Welcome to Edible Elysium.
-							</p>
+						<p>
+						Welcome to a blissful, transcendent experience to delight your 
+						taste buds and quench your thirst for the most elegant and palate 
+						pleasing restaurant where tasting is believing. We bring you the 
+						top chefs from around the world on a bi-weekly basis, keeping our
+						menu items, ingredients, and luxurious decor fresh and exciting for
+						a new experience each visit. No two meals will ever be the same here.
+						Come, transcend with us.
+						<br /><br />
+						Welcome to Edible Elysium.
+						</p>
 							
 					</div>
 					<div class="col-lg-3 col-md-2"></div>
@@ -96,6 +112,7 @@
 			
 			<hr />
 			
+			<!-- Page footer containing address and phone number of restaurant -->
 			<footer>
 				<p>404 Northfork Rd, Indian Trail, NC 28079</p>
 				<p>202-555-0165</p>

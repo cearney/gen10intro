@@ -1,18 +1,20 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
     Name: Caleb Earney
     Date Created: 9/25/2019
-    Most recent revision: 
+    Most recent revision: Added Javascript form elements
 -->
-<html lang="en"> 
+<html lang="en">
     <head>
 	
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel="stylesheet" type="text/css" href="restaurantStyles.css" />
+		<!-- Fonts retrieved from Google Fonts at https://fonts.google.com/ -->
 		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Satisfy&display=swap" rel="stylesheet">
 		
+		<!-- Internal style sheet for contact-specific styles -->
 		<style>
 			
 			.required {
@@ -41,40 +43,46 @@
 		
 		<script>
 		
+			/*
+				Function to validate the form items for the Contact Us page
+				using if statements for each field item
+			*/
 			function validateForm() {
+				// Retrieves the values for each form field item
 				var n = document.forms["contact-form"]["name"].value;
 				var e = document.forms["contact-form"]["email"].value;
 				var p = document.forms["contact-form"]["phone"].value;
 				var i = document.forms["contact-form"]["info"].value;
 			  
-				if (n == "") {
+				if (n == "") { // If name is empty, error message
 					alert("Please provide a Name.");
 					return false;
 				}
 
-				if (e == "") {
+				if (e == "") { // If email is empty, error message
 					alert("Please provide a valid Email.");
 					return false;
 				}
 
-				if (p == "") {
+				if (p == "") { // If phone number is empty, error message
 					alert("Please provide a valid Phone Number.");
 					return false;
 				}
 
-				if (i == "") {
+				if (i == "") { // If additional info box is empty, error message
 					alert("Please provide Additional Information about your request.");
 					return false;
 				}
 
+				// If no radio buttons are checked, error message
 				if (document.getElementById("choice1").checked == false && document.getElementById("choice2").checked == false) {
 					alert("Please indicate whether you have been to the restaurant: Yes or No");
 					return false;
 				}
 				
-				var ischecked =$('input[type=checkbox]:checked').length;
+				var ischecked =$('input[type=checkbox]:checked').length; // Variable to determine if any checkbox is checked
 				
-				if (ischecked == 0) {
+				if (ischecked == 0) { // If no checkboxes are checked, error message
 					alert("Please indicate a day of the week to contact you.");
 					return false;
 				}
@@ -94,132 +102,162 @@
     
     <body>
 	
+		<!-- Div container that holds body items affected by Bootstrap -->
 		<div class="container">
+			
+			<!-- This will display if JavaScript is currently disabled in user's browser -->
 			<noscript>
 				<br />
 				<div style="border: 2px dashed red; padding: 10px">
 					<center><span style="color: red; font-weight: bold; font-size: 20px;">JavaScript is currently disabled in your browser. This site is best viewed with JavaScript enabled.</span></center>
 				</div>
 			</noscript>
+
+			<!-- Jumbotron as page header to display restaurant title and big news with floral background -->
 			<header class="jumbotron floral-gradient">
 				<h1>Edible Elysium</h1><br />
 				<h2>We're opening a new location in Uptown Charlotte!</h2>
 			</header>
 			
+			<!-- Carousel that rotates with three pieces of information about restaurant news -->
+			<div class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <span class="fas fa-city" aria-hidden="true"></span> We're opening a new location! It will be located in the Southside of Uptown Charlotte!
+				</div>
+				<div class="carousel-item">
+				  <span class="fas fa-seedling" aria-hidden="true"></span> We're rolling out our seasonal menu, with special options for this season.
+				</div>
+				<div class="carousel-item">
+				  <span class="fas fa-coffee" aria-hidden="true"></span> The Drink of the Month is SG Special Brew.
+				</div>
+			  </div>
+			</div>
+			
 			<hr />
 			
+			<!-- Navigation bar with pills for links and a home button icon -->
 			<nav>
-				
 				<a class="btn badge-pill" href="index.html"><span class="fas fa-home" aria-hidden="true"></span></a>
 				<a class="btn badge-pill" href="menu.html">Menu</a>
 				<a class="btn badge-pill" href="contact.html">Contact Us</a>
-				
 			</nav>
+			
+	<!-- Body items above are all the same across the pages. Body items below excluding footer are unique to this page --------------------------------------->
 			
 			<hr />
 			
 			<br />
-					
-				<form name="contact-form" onsubmit="return validateForm()" method="POST">
-					
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label for="name" class="required col-lg-3 col-md col-form-label control-label">Name:</label>
-						<div class="form-group col-lg-3 col-md">
-							<input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-						</div>
-						<div class="col-lg-4 col-md"></div>
+				
+			<!-- Bootstrap form that validates with internal JavaScript on submit -->
+			<form name="contact-form" onsubmit="return validateForm()" method="POST">
+				
+				<!-- Bootstrap form row containing label and input for Name -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label for="name" class="required col-lg-3 col-md col-form-label control-label">Name:</label>
+					<div class="form-group col-lg-3 col-md">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
 					</div>
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label for="email" class="required col-lg-3 col-md col-form-label control-label">Email:</label>
-						<div class="form-group col-lg-3 col-md">
-							<input type="email" class="form-control" id="email" name="email" placeholder="youremail@example.com">
-						</div>
-						<div class="col-lg-4 col-md"></div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				<!-- Bootstrap form row containing label and input for Email -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label for="email" class="required col-lg-3 col-md col-form-label control-label">Email:</label>
+					<div class="form-group col-lg-3 col-md">
+						<input type="email" class="form-control" id="email" name="email" placeholder="youremail@example.com">
 					</div>
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label for="phone" class="required col-lg-3 col-md col-form-label control-label">Phone:</label>
-						<div class="form-group col-lg-3 col-md">
-							<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="phone" name="phone" placeholder="###-###-####">
-						</div>
-						<div class="col-lg-4 col-md"></div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				<!-- Bootstrap form row containing label and input for Phone -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label for="phone" class="required col-lg-3 col-md col-form-label control-label">Phone:</label>
+					<div class="form-group col-lg-3 col-md">
+						<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="phone" name="phone" placeholder="###-###-####">
 					</div>
-					
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label for="inquiry" class="required col-lg-3 col-md col-form-label control-label">Reason for Inquiry:</label>
-						<div class="form-group col-lg-3 col-md">
-							<select class="form-control" id="inquiry" name="inquiry">
-								<option value="default" selected>Catering</option>
-								<option value="party">Private Party</option>
-								<option value="feedback">Feedback</option>
-								<option value="other">Other</option>
-							</select>
-						</div>
-						<div class="col-lg-4 col-md"></div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				<!-- Bootstrap form row containing label and selection for Inquiry -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label for="inquiry" class="required col-lg-3 col-md col-form-label control-label">Reason for Inquiry:</label>
+					<div class="form-group col-lg-3 col-md">
+						<select class="form-control" id="inquiry" name="inquiry">
+							<option value="default" selected>Catering</option>
+							<option value="party">Private Party</option>
+							<option value="feedback">Feedback</option>
+							<option value="other">Other</option>
+						</select>
 					</div>
-					
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label for="info" class="required col-lg-3 col-md control-label">Additional Information:</label>
-						<div class="form-group col-lg-3 col-md">
-							<textarea class="form-control" id="info" name="info" rows="5"></textarea>
-						</div>
-						<div class="col-lg-4 col-md"></div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				<!-- Bootstrap form row containing label and text box for Additional Information -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label for="info" class="required col-lg-3 col-md control-label">Additional Information:</label>
+					<div class="form-group col-lg-3 col-md">
+						<textarea class="form-control" id="info" name="info" rows="5"></textarea>
 					</div>
-					
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label id="question" class="required col-lg-3 col-md control-label">Have you been to the restaurant?</label>
-						<div class="col-lg-3 col-md">
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="radio" id="choice1" name="questionnaire" value="no">
-							  <label class="form-check-label" for="choice1">No</label>
-							</div>
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="radio" id="choice2" name="questionnaire" value="yes">
-							  <label class="form-check-label" for="choice2">Yes</label>
-							</div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				<!-- Bootstrap form row containing label and radio buttons for a Yes/No Question -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label id="question" class="required col-lg-3 col-md control-label">Have you been to the restaurant?</label>
+					<div class="col-lg-3 col-md">
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" id="choice1" name="questionnaire" value="no">
+						  <label class="form-check-label" for="choice1">No</label>
 						</div>
-						<div class="col-lg-4 col-md"></div>
-					</div>
-					
-					<div class="form-group row">
-						<div class="col-lg-2 col-md"></div>
-						<label id="best" class="required col-lg-3 col-md control-label">Best days to contact you:</label>
-						<div class="col-lg-3 col-md">
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="weekday" value="mon">
-							  <label class="form-check-label" for="inlineCheckbox1">M</label>
-							</div>
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="weekday" value="tues">
-							  <label class="form-check-label" for="inlineCheckbox2">T</label>
-							</div>
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="weekday" value="wed">
-							  <label class="form-check-label" for="inlineCheckbox3">W</label>
-							</div>
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="weekday" value="thurs">
-							  <label class="form-check-label" for="inlineCheckbox4">Th</label>
-							</div>
-							<div class="form-check form-check-inline">
-							  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="weekday" value="fri">
-							  <label class="form-check-label" for="inlineCheckbox5">Fri</label>
-							</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" id="choice2" name="questionnaire" value="yes">
+						  <label class="form-check-label" for="choice2">Yes</label>
 						</div>
-						<div class="col-lg-4 col-md"></div>
 					</div>
-					
-					<br />
-					<div class="text-center"><button type="submit" class="btn btn-primary">Send Request</button></div>
-				</form>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				<!-- Bootstrap form row containing label and checkboxes for Best Days of the Week -->
+				<div class="form-group row">
+					<div class="col-lg-2 col-md"></div>
+					<label id="best" class="required col-lg-3 col-md control-label">Best days to contact you:</label>
+					<div class="col-lg-3 col-md">
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="weekday" value="mon">
+						  <label class="form-check-label" for="inlineCheckbox1">M</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="weekday" value="tues">
+						  <label class="form-check-label" for="inlineCheckbox2">T</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="weekday" value="wed">
+						  <label class="form-check-label" for="inlineCheckbox3">W</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="weekday" value="thurs">
+						  <label class="form-check-label" for="inlineCheckbox4">Th</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="weekday" value="fri">
+						  <label class="form-check-label" for="inlineCheckbox5">Fri</label>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md"></div>
+				</div>
+				
+				<br />
+				
+				<!-- Bootstrap centered button for Sending user's Request and validating form -->
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary">Send Request</button>
+				</div>
+			</form>
 			
 			<hr />
-				
+			
+			<!-- Page footer containing address and phone number of restaurant -->
 			<footer>
 				<p>404 Northfork Rd, Indian Trail, NC 28079</p>
 				<p>202-555-0165</p>

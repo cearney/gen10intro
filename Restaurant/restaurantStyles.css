@@ -1,55 +1,60 @@
+/*  
+	Name: Caleb Earney
+    Date Created: 10/1/2019
+*/
+
+/* Style for header across all pages */
 header {
-	
 	text-align: center;
 }
 
+/* Style for h1 style headers within header */
 header h1 {
-	
-	
 	font-family: 'Satisfy', cursive;
 	font-size: 4em;
 }
 
+/* Style for h2 style headers within header */
 header h2 {
-	
 	font-family: 'Bad Script', cursive;
 }
 
+/* Style for jumbotron within headers */
 header.jumbotron {
-	
 	background-color: rgb(212, 239, 223);
 	box-shadow: 0 0 10px 10px white inset;
 }
 
-footer p{
-	
+/* Style for paragraph items in all footers */
+footer p {
 	text-align: center;
 }
 
+/* Style for links default color */
 a:link {
-	
 	color: black;
 }
 
+/* Style for visited link color */
 a:visited {
-	
 	color: purple;
 }
 
+/* Style for link color when hovered over */
 a:hover {
-	
 	text-decoration: none !important;
 	font-weight: bold;
 	color: black !important;
 }
 
+/* Style for nav bar padding */
 nav {
-	
 	padding-top: 12px;
 	padding-bottom: 12px;
 }
+
+/* Style for nav bar buttons */
 nav .btn {
-	
 	background:
     linear-gradient(
 		rgba(212, 239, 223, .93), 
@@ -57,6 +62,8 @@ nav .btn {
     );
 }
 
+/* Style for carousel including alignment, 
+	font, box blur effect, and gradient background */
 .carousel {
 	text-align: center;
 	font-family: 'Bad Script', cursive;
@@ -72,9 +79,10 @@ nav .btn {
 		white
     ),
 	url(images/ornamental.png);
-
 }
 
+/* Style for content like paragraph and menu items
+	including background color, box blur effect, alignment, and font */
 .content {
 	background-color: rgb(212, 239, 223);
 	padding: 20px;
@@ -85,16 +93,13 @@ nav .btn {
 	font-size: 1.25em;
 }
 
-.price-font {
-	
-	font-family: "Lucida Handwriting", cursive;
-}
-
+/* Style for paragraph items to be justified */
 p {
-	
 	text-align: justify;
 }
 
+/* Style for making backgrounds a gradient with 
+	two colors and a faded floral image*/
 .floral-gradient {
   background:
     linear-gradient(
