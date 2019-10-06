@@ -2,7 +2,7 @@
 <!--
     Name: Caleb Earney
     Date Created: 10/4/2019
-    Most recent revision: Completed layout and link to JavaScript elements
+    Most recent revision: Fixed results table to show money format, general cleanup
 -->
 <html lang="en">
 	<head>
@@ -16,7 +16,6 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		
 		<style>
-			
 			@media (min-width: 0) {
 				.control-label{
 					text-align: center;
@@ -48,9 +47,8 @@
 			
 			.table {
 				font-family: "Comic Sans MS", cursive, sans-serif;
-				font-size: 15px;
+				font-size: 14px;
 			}
-			
 		</style>
 
 		<script type="text/javascript" src="lucky-sevens-script.js"></script>
@@ -109,7 +107,7 @@
 					<table id="results" class="table table-striped table-bordered" style="display: none;">
 						<tr>
 							<td>Starting Bet</td>
-							<td><span id="start-bet"></span></td>
+							<td><span>$</span><span id="start-bet"></span><span>.00</span></td>
 						</tr>
 						<tr>
 							<td>Total Rolls Before Going Broke</td>
@@ -117,7 +115,7 @@
 						</tr>
 						<tr>
 							<td>Highest Amount Won</td>
-							<td><span id="max-amount"></span></td>
+							<td><span>$</span><span id="max-amount"></span><span>.00</span></td>
 						</tr>
 						<tr>
 							<td>Roll Count at Hightest Amount Won</td>
