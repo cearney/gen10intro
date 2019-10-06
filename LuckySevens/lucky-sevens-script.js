@@ -1,7 +1,7 @@
 /*
 	Name: Caleb Earney
-	Date Created: 10/1/2019
-	Most recent revision: Created basic web layout
+	Date Created: 10/4/2019
+	Most recent revision: Completed functional code to play Lucky Sevens
 */
 
 /*
